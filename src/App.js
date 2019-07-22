@@ -1,17 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import MyNavBar from './components/NavBar';
+require('bootstrap')
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <MyNavBar/>
+      <header className={styles.App_header}>
+        <img src={logo} className={styles.App_logo} alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Test.
         </p>
         <a
-          className="App-link"
+          className={styles.App_link}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
