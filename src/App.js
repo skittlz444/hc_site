@@ -1,27 +1,26 @@
-import React from 'react';
+import React, {Suspense, lazy} from 'react';
 import logo from './logo.svg';
 import styles from './App.module.css';
 import MyNavBar from './components/NavBar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
 require('bootstrap')
+
+const Home = lazy(() => import('./components/Home'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (
     <div className="App">
-      <MyNavBar/>
-      <header className={styles.App_header}>
-        <img src={logo} className={styles.App_logo} alt="logo" />
-        <p>
-          Test.
-        </p>
-        <a
-          className={styles.App_link}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <MyNavBar/>
+        <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/contact' component={Contact} />
+        </Switch>
+        </Suspense>
+      </Router>
     </div>
   );
 }

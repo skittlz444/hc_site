@@ -1,3 +1,32 @@
 .navLinksContainer{
 	padding-right:10px;
 }
+
+.navContainer{
+	background: linear-gradient(45deg, rgba(29, 224, 153), rgba(30,144,255));
+	padding-bottom: 0rem;
+}
+
+.navBrand{
+	margin-left: 7.5%;
+}
+
+.navBrand>h2{
+	text-transform: uppercase;
+	white-space: nowrap;
+	letter-spacing: 3px;
+	font-family: "Monsterrat", sans-serif;
+}
+
+.navBrandSubHeadings>p{
+	font-size: 0.55rem;
+	text-transform: uppercase;
+	white-space: nowrap;
+	letter-spacing: 2px;
+	font-family: "Monsterrat", sans-serif;
+	margin-bottom: 0px;
+}
+
+.navBrandSubHeadings, .navLinksContainer{
+	margin-top: -7px;
+}
