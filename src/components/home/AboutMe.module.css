@@ -1,0 +1,30 @@
+.aboutMeRow{
+	min-height: 15rem;
+	background:linear-gradient(45deg, rgba(29,224,153,0.8),rgba(30,144,255,0.8));
+	color:white;
+	max-width: 100%;
+	margin:0;
+}
+
+.aboutMeCol{
+	display:flex;
+	align-items: center;
+}
+
+.aboutMeText{
+	text-align: center;
+	font-family: "Monsterrat", sans-serif;
+}
+
+.aboutMeText >h3{
+	text-transform: uppercase;
+}
+
+.aboutMeText >h5{
+	padding-top: 1rem;
+}
+
+.heroImage{	
+	margin-top:10%;
+	margin-bottom: 10%;
+}

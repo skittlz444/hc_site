@@ -19,12 +19,11 @@ export default class MyNavBar extends React.Component{
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 					<Navbar.Collapse className="justify-content-end">
 						<Nav className={styles.navLinksContainer}>
-						
-							<Nav.Link className={styles.navLink}>
-								<Link className='nav-link' to={'/'}>Home</Link>
+							<Nav.Link>
+								<Link className={styles.navLink + ' nav-link'} to={'/'}>Home</Link>
 							</Nav.Link>
-							<Nav.Link className={styles.navLink}>
-								<Link className='nav-link' to={'/contact'}>Contact</Link>
+							<Nav.Link>
+								<Link className={styles.navLink + ' nav-link'} to={'/contact'}>Contact</Link>
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
