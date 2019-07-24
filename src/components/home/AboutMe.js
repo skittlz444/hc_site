@@ -1,6 +1,9 @@
 import React from 'react';
 import {Row, Col, Image} from 'react-bootstrap'
 import styles from './AboutMe.module.css'
+import LazyLoad from 'react-lazyload'
+import hero from './img/about_me_background.jpg'
+import hero_tiny from './img/about_me_background_tiny.jpg'
 
 export default class AboutMe extends React.Component{
 	render(){
@@ -22,7 +25,17 @@ export default class AboutMe extends React.Component{
 					<Col className={styles.aboutMeCol}>
 						<Col>
 							<div>
-								<Image className={styles.heroImage} src='https://www.google.com/logos/doodles/2019/childrens-day-2019-indonesia-5074866842632192-2x.png' fluid/>
+								<LazyLoad
+									placeholder={<img className={styles.lazy} src={hero_tiny}/>}
+									width={100}
+									height={100}
+									debounce={false}
+									offsetVertical={300}
+									once={true}
+									>
+									<img className={styles.heroImage} src={hero}/>
+								</LazyLoad>
+								
 							</div>
 						</Col>
 					</Col>
