@@ -26,14 +26,14 @@ export default class AboutMe extends React.Component{
 						<Col>
 							<div>
 								<LazyLoad
-									placeholder={<img className={styles.lazy} src={hero_tiny}/>}
+									placeholder={<Image className={styles.lazy} src={hero_tiny} alt="Hero"/>}
 									width={100}
 									height={100}
 									debounce={false}
 									offsetVertical={300}
 									once={true}
 									>
-									<img className={styles.heroImage} src={hero}/>
+										<Image className={styles.heroImage + " animated fadeIn"} src={hero} alt="Hero"/>
 								</LazyLoad>
 								
 							</div>
