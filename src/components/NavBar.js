@@ -9,12 +9,12 @@ export default class MyNavBar extends React.Component{
 		return (
 				<Navbar className={styles.navContainer} bg="dark" variant="dark" expand="sm" sticky="top">
 					<Navbar.Brand className={styles.navBrand}>
-						<h2>
+						<h2 className={styles.whiteText}>
 							Hayden Carson
 						</h2>
 					</Navbar.Brand>
 					<Navbar.Brand className={styles.navBrandSubHeadings}>
-						<p>Software Engineer</p><p>Web Developer</p>
+						<p className={styles.whiteText}>Software Engineer</p><p className={styles.whiteText}>Web Developer</p>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 					<Navbar.Collapse className="justify-content-end">

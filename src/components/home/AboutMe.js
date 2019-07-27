@@ -12,10 +12,10 @@ export default class AboutMe extends React.Component{
 					<Col className={styles.aboutMeCol}>
 						<Col>
 							<div className={styles.aboutMeText}>
-								<h3>
+								<h3 className={styles.whiteText}>
 									Computer Scientist
 								</h3>
-								<h5>
+								<h5 className={styles.whiteText}>
 									Designing efficient solutions for complex challenges
 								</h5>
 								
@@ -33,7 +33,7 @@ export default class AboutMe extends React.Component{
 									offsetVertical={300}
 									once={true}
 									>
-										<Image className={styles.heroImage + " animated fadeIn"} src={hero} alt="Hero"/>
+										<Image className={styles.heroImage + " wow fadeIn"} src={hero} alt="Hero"/>
 								</LazyLoad>
 								
 							</div>
@@ -42,10 +42,10 @@ export default class AboutMe extends React.Component{
 					<Col className={styles.aboutMeCol}>
 						<Col>
 							<div  className={styles.aboutMeText}>
-								<h3>
+								<h3 className={styles.whiteText}>
 									Web Developer
 								</h3>
-								<h5>
+								<h5 className={styles.whiteText}>
 									Working with you to build elegant web solutions for your business
 								</h5>
 							</div>

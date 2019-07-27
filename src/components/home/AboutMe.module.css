@@ -1,3 +1,6 @@
+.whiteText{
+	color:white!important;
+}
 .aboutMeRow{
 	min-height: 15rem;
 	background:linear-gradient(45deg, rgba(32,154,253,0.8),rgba(0,25,210,0.8)), url(./img/about_me_background.jpg) no-repeat center;
@@ -13,10 +16,6 @@
 
 .aboutMeText{
 	text-align: center;
-}
-
-.aboutMeText >h3{
-	/*text-transform: uppercase;*/
 }
 
 .aboutMeText >h5{

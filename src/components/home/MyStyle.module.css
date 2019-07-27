@@ -1,15 +1,25 @@
 .myStyleCol{
 	display:flex;
 	align-items: center;
+	/*padding:0px;*/
+	/*margin-right: 10px*/
+}
+
+.myStyleRow{
+	max-width: 100%;
+	padding:0px;
+	margin:0px;
 }
 
 .myStyleContainer{
 	padding-top: 1.5rem;
-	background-color:rgb(239, 245, 245)
+	background-color:rgb(239, 245, 245);
+	/*margin:0px;*/
+	/*max-width: 100%;*/
+
 }
 
 .myStyleHeader {
-	color:rgb(102,102,102);
 	font-weight: 300;
 }
 
@@ -22,4 +32,21 @@
 
 .lazy{
 	filter:blur(3px);
+}
+
+.quoteText{
+	font-style: italic;
+	/*text-align: center;*/
+}
+
+.quoteAuthor{
+	font-weight: 600;
+	font-size: 1rem;
+	/*text-align: center;*/
+}
+
+.myStyleTextGroup{
+	font-size: 1.2rem;
+	padding: 30px 0px 0px 0px;
+	text-align: center;
 }
