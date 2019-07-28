@@ -1,7 +1,6 @@
 import React from 'react';
 import {Row, Col, Image} from 'react-bootstrap'
 import styles from './MyStyle.module.css'
-import sharedStyles from '../SharedStyles.module.css'
 import LazyLoad from 'react-lazyload'
 
 import image from './img/my_style.jpg'
@@ -11,7 +10,7 @@ export default class MyStyle extends React.Component{
 	render(){
 		return(
 			<div className={styles.myStyleContainer}>
-				<Row className={styles.myStyleRow+' justify-content-center'}>
+				<Row className={styles.myStyleRow +' justify-content-center'}>
 					<h3 className={styles.myStyleHeader + " wow fadeIn"}>My Style</h3>
 				</Row>
 				<Row className={styles.myStyleRow}>
