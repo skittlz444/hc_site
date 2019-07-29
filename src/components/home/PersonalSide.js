@@ -18,21 +18,21 @@ export default class PersonalSide extends React.Component{
 						<Col>
 							<div>
 								<LazyLoad
-									placeholder={<div>Loading..</div>}
+									placeholder={Image className={styles.personalSideImage + " wow fadeInRight slow"} src={image_tiny} alt="Personal Side"/>}
 									width={100}
 									height={100}
 									debounce={false}
 									offsetVertical={500}
 									once={true}
 									>
-										<Image className={styles.personalSideImage + " wow fadeInRight delay-1s slow"} src={image} alt="Personal Side"/>
+										<Image className={styles.personalSideImage + " wow fadeInRight slow"} src={image} alt="Personal Side"/>
 								</LazyLoad>
 							</div>
 						</Col>
 					</Col>
 					<Col className={styles.personalSideCol} lg={{order:1}}>
 						<Col>
-							<div className=" wow fadeInLeft delay-1s slow">
+							<div className=" wow fadeInLeft slow">
 								<div className={styles.personalSideTextGroup}>
 									<h4>
 										<span>There is more to an employee than a tool. </span><span>There is also a person.</span>

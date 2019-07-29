@@ -25,14 +25,14 @@ export default class MyStyle extends React.Component{
 									offsetVertical={500}
 									once={true}
 									>
-										<Image className={styles.myStyleImage + " wow fadeInLeft delay-1s slow"} src={image} alt="My Style"/>
+										<Image className={styles.myStyleImage + " wow fadeInLeft slow"} src={image} alt="My Style"/>
 								</LazyLoad>
 							</div>
 						</Col>
 					</Col>
 					<Col className={styles.myStyleCol} lg={{order:1}}>
 						<Col>
-							<div className=" wow fadeInRight delay-1s slow">
+							<div className=" wow fadeInRight slow">
 								<div className={styles.myStyleTextGroup}>
 									<div className={styles.quoteText}>
 										"Mobile is not the future, its the now."
