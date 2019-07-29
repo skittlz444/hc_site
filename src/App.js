@@ -4,9 +4,9 @@ import React, {Suspense, lazy} from 'react';
 import MyNavBar from './components/NavBar';
 import sharedStyles from './components/SharedStyles.module.css'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import WOW from 'wowjs'
 require('animate.css')
 require('bootstrap')
+// require('./avilon.css')
 
 const Home = lazy(() => import('./components/Home'));
 const Contact = lazy(() => import('./components/Contact'));

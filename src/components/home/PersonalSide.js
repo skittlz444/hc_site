@@ -13,8 +13,8 @@ export default class PersonalSide extends React.Component{
 				<Row className={styles.personalSideRow +' justify-content-center'}>
 					<h3 className={styles.personalSideHeader + " wow fadeIn"}>The Personal Side</h3>
 				</Row>
-				<Row className={styles.personalSideRow}>
-					<Col lg={{order:2}}>
+				<Row className={styles.personalSideCol} className={styles.personalSideRow}>
+					<Col md={{order:2}}>
 						<Col>
 							<div>
 								<LazyLoad
@@ -30,12 +30,12 @@ export default class PersonalSide extends React.Component{
 							</div>
 						</Col>
 					</Col>
-					<Col className={styles.personalSideCol} lg={{order:1}}>
+					<Col className={styles.personalSideCol} md={{order:1}}>
 						<Col>
 							<div className=" wow fadeInLeft delay-1s slow">
 								<div className={styles.personalSideTextGroup}>
 									<h4>
-										There is more to an employee than a tool. There is also a person.
+										<span>There is more to an employee than a tool. </span><span>There is also a person.</span>
 									</h4>
 									<h5>
 										So who am I as a person?

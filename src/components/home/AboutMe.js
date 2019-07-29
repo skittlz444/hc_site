@@ -9,7 +9,7 @@ export default class AboutMe extends React.Component{
 	render(){
 		return(
 				<Row className={styles.aboutMeRow}>
-					<Col className={styles.aboutMeCol}>
+					<Col md={{order:1}} className={styles.aboutMeCol}>
 						<Col>
 							<div className={styles.aboutMeText}>
 								<h3 className={styles.whiteText}>
@@ -22,7 +22,7 @@ export default class AboutMe extends React.Component{
 							</div>
 						</Col>
 					</Col>
-					<Col className={styles.aboutMeCol}>
+					<Col className={styles.aboutMeCol} md={{order:2}}>
 						<Col>
 							<div>
 								<LazyLoad
@@ -35,11 +35,10 @@ export default class AboutMe extends React.Component{
 									>
 										<Image className={styles.heroImage + " wow fadeIn"} src={hero} alt="Hero"/>
 								</LazyLoad>
-								
 							</div>
 						</Col>
 					</Col>
-					<Col className={styles.aboutMeCol}>
+					<Col className={styles.aboutMeCol} md={{order:3}}>
 						<Col>
 							<div  className={styles.aboutMeText}>
 								<h3 className={styles.whiteText}>
