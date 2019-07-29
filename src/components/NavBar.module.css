@@ -7,7 +7,7 @@
 
 .navContainer{
 	background: linear-gradient(45deg, rgba(6,151,255,0.85), rgba(2,21,159));
-	padding-bottom: 0rem;
+	/*padding-bottom: 0.5rem;*/
 }
 
 .navBrand{

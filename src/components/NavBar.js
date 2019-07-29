@@ -10,11 +10,25 @@ export default class MyNavBar extends React.Component{
 		return (
 				<Navbar className={styles.navContainer} bg="dark" variant="dark" expand="md" sticky="top">
 					<Navbar.Brand className={styles.navBrand}>
-						<h2 className={styles.whiteText}>
-							Hayden Carson
-						</h2>
+						<MediaQuery minWidth={450}>
+						{(matches)=>{
+							if (matches){
+								return (
+									<h2 className={styles.whiteText}>
+										Hayden Carson
+									</h2>)
+							} else {
+								return (
+									<h2 className={styles.whiteText}>
+										H.Carson 
+									</h2>
+								)
+							}
+							}
+						}
+						</MediaQuery>
 					</Navbar.Brand>
-					<MediaQuery query="(min-width: 600px)">
+					<MediaQuery minWidth={600}>
 						<Navbar.Brand className={styles.navBrandSubHeadings}>
 							<p className={styles.whiteText}>Software Engineer</p><p className={styles.whiteText}>Web Developer</p>
 						</Navbar.Brand>
