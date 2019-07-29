@@ -18,7 +18,7 @@ export default class PersonalSide extends React.Component{
 						<Col>
 							<div>
 								<LazyLoad
-									placeholder={Image className={styles.personalSideImage + " wow fadeInRight slow"} src={image_tiny} alt="Personal Side"/>}
+									placeholder={<Image className={styles.personalSideImage + " wow fadeInRight slow"} src={image_tiny} alt="Personal Side"/>}
 									width={100}
 									height={100}
 									debounce={false}
