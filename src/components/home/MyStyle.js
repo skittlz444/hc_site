@@ -14,11 +14,11 @@ export default class MyStyle extends React.Component{
 					<h3 className={styles.myStyleHeader + " wow fadeIn"}>My Style</h3>
 				</Row>
 				<Row className={styles.myStyleRow}>
-					<Col className={styles.myStyleCol} md={{order:1}}>
+					<Col className={styles.myStyleCol} lg={{order:1}}>
 						<Col>
 							<div>
 								<LazyLoad
-									placeholder={<div>Loading..</div>}
+									placeholder={<Image className={styles.myStyleImage + " wow fadeInLeft delay-1s slow"} src={image_tiny} alt="My Style"/>}
 									width={100}
 									height={100}
 									debounce={false}
@@ -30,7 +30,7 @@ export default class MyStyle extends React.Component{
 							</div>
 						</Col>
 					</Col>
-					<Col className={styles.myStyleCol} md={{order:1}}>
+					<Col className={styles.myStyleCol} lg={{order:1}}>
 						<Col>
 							<div className=" wow fadeInRight delay-1s slow">
 								<div className={styles.myStyleTextGroup}>

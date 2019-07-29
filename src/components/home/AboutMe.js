@@ -9,7 +9,7 @@ export default class AboutMe extends React.Component{
 	render(){
 		return(
 				<Row className={styles.aboutMeRow}>
-					<Col md={{order:1}} className={styles.aboutMeCol}>
+					<Col lg={{order:1}} className={styles.aboutMeCol}>
 						<Col>
 							<div className={styles.aboutMeText}>
 								<h3 className={styles.whiteText}>
@@ -22,7 +22,7 @@ export default class AboutMe extends React.Component{
 							</div>
 						</Col>
 					</Col>
-					<Col className={styles.aboutMeCol} md={{order:2}}>
+					<Col className={styles.aboutMeCol} lg={{order:2}}>
 						<Col>
 							<div>
 								<LazyLoad
@@ -38,7 +38,7 @@ export default class AboutMe extends React.Component{
 							</div>
 						</Col>
 					</Col>
-					<Col className={styles.aboutMeCol} md={{order:3}}>
+					<Col className={styles.aboutMeCol} lg={{order:3}}>
 						<Col>
 							<div  className={styles.aboutMeText}>
 								<h3 className={styles.whiteText}>
