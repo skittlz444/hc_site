@@ -3,6 +3,7 @@ import React, {Suspense, lazy} from 'react';
 // import styles from './App.module.css';
 import MyNavBar from './components/NavBar';
 import sharedStyles from './components/SharedStyles.module.css'
+import SuspensePlaceholder from './components/SuspensePlaceholder.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 require('animate.css')
 require('bootstrap')
@@ -16,7 +17,7 @@ function App() {
     <div className="App">
       <Router>
         <MyNavBar/>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<SuspensePlaceholder/>}>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/contact' component={Contact} />
