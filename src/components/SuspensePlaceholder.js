@@ -4,7 +4,7 @@ import styles from './SuspensePlaceholder.module.css'
 export default class SuspensePlaceholder extends React.Component{
 	render(){
 		return(
-				<div className={styles.suspenseContainer + ' animated infinite pulse'}>
+				<div className={styles.suspenseContainer + ' animated infinite pulse slow'}>
 					<h3>Loading...</h3>
 				</div>
 			)
