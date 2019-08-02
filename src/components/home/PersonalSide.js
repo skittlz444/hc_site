@@ -43,8 +43,8 @@ export default class PersonalSide extends React.Component{
 								</div>
 								<div className={styles.personalSideTextGroup}>
 									<p>I'm a reader, a gamer, a thinker</p>
-									<p>A rugby player, a hiker, an outdoorsman</p>
-									<p>A guitarist, a Monstercat Family member, a music lover</p>
+									<p>A hiker, an outdoorsman, a coffee enthusiast</p>
+									<p>A guitarist, a Monstercat family member, a music lover</p>
 								</div>
 							</div>
 						</Col>
