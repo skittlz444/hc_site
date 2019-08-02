@@ -1,10 +1,10 @@
 import React from 'react';
-import {Row, Col, Image} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 import styles from './PersonalSide.module.css'
-import LazyLoad from 'react-lazyload'
 
 import image from './img/personal_side.jpeg'
 import image_tiny from './img/personal_side_tiny.jpeg'
+import LazyImageLoader from '../placeholders/LazyImageLoader'
 
 export default class PersonalSide extends React.Component{
 	render(){
@@ -17,16 +17,7 @@ export default class PersonalSide extends React.Component{
 					<Col className={styles.personalSideCol} lg={{order:2}}>
 						<Col>
 							<div>
-								<LazyLoad
-									placeholder={<Image className={styles.personalSideImage + " wow fadeInRight slow"} src={image_tiny} alt="Personal Side"/>}
-									width={100}
-									height={100}
-									debounce={false}
-									offsetVertical={500}
-									once={true}
-									>
-										<Image className={styles.personalSideImage + " wow fadeInRight slow"} src={image} alt="Personal Side"/>
-								</LazyLoad>
+								<LazyImageLoader tinyImage={image_tiny} image={image} alt="Personal Side" className={styles.personalSideImage + ' wow fadeInRight slow'}/>
 							</div>
 						</Col>
 					</Col>

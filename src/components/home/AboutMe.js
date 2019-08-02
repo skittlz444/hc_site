@@ -1,9 +1,9 @@
 import React from 'react';
-import {Row, Col, Image, Container} from 'react-bootstrap'
+import {Row, Col, Container} from 'react-bootstrap'
 import styles from './AboutMe.module.css'
-import LazyLoad from 'react-lazyload'
 import hero from './img/about_me_background.jpg'
 import hero_tiny from './img/about_me_background_tiny.jpg'
+import LazyImageLoader from '../placeholders/LazyImageLoader'
 
 export default class AboutMe extends React.Component{
 	render(){
@@ -41,16 +41,7 @@ export default class AboutMe extends React.Component{
 					<Col className={styles.aboutMeCol + " " + styles.aboutMeHeroContainer + " wow fadeInRight"} lg={{order:2}}>
 						<Col className={styles.aboutMeHeroContainer}>
 							<div>
-								<LazyLoad
-									placeholder={<Image className={styles.lazy} src={hero_tiny} alt="Hero"/>}
-									width={100}
-									height={100}
-									debounce={false}
-									offsetVertical={300}
-									once={true}
-									>
-										<Image className={styles.heroImage} src={hero} alt="Hero"/>
-								</LazyLoad>
+								<LazyImageLoader tinyImage={hero_tiny} image={hero} alt="Hero"/>
 							</div>
 						</Col>
 					</Col>

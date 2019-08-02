@@ -1,10 +1,10 @@
 import React from 'react';
-import {Row, Col, Image} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 import styles from './MyStyle.module.css'
-import LazyLoad from 'react-lazyload'
 
 import image from './img/my_style.jpg'
 import image_tiny from './img/my_style_tiny.jpg'
+import LazyImageLoader from '../placeholders/LazyImageLoader'
 
 export default class MyStyle extends React.Component{
 	render(){
@@ -17,16 +17,7 @@ export default class MyStyle extends React.Component{
 					<Col className={styles.myStyleCol} lg={{order:1}}>
 						<Col>
 							<div>
-								<LazyLoad
-									placeholder={<Image className={styles.myStyleImage + " wow fadeInLeft delay-1s slow"} src={image_tiny} alt="My Style"/>}
-									width={100}
-									height={100}
-									debounce={false}
-									offsetVertical={500}
-									once={true}
-									>
-										<Image className={styles.myStyleImage + " wow fadeInLeft slow"} src={image} alt="My Style"/>
-								</LazyLoad>
+								<LazyImageLoader tinyImage={image_tiny} image={image} alt="Personal Side" className={styles.myStyleImage + ' wow fadeInLeft slow'}/>
 							</div>
 						</Col>
 					</Col>

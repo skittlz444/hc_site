@@ -35,7 +35,3 @@
 	max-xheight: 100%;
 	max-width: 100%;
 }
-
-.lazy{
-	filter: blur(3px);
-}
