@@ -15,9 +15,9 @@ describe('<Home />', () => {
 
 	it('shallow renders the 3 child components', ()=>{
 		const wrapper = shallow(<Home />);
-		expect(wrapper.exists(AboutMe)).toEqual(true);
-		expect(wrapper.exists(PersonalSide)).toEqual(true);
-		expect(wrapper.exists(MyStyle)).toEqual(true);
+		expect(wrapper.exists(AboutMe)).toBeTruthy();
+		expect(wrapper.exists(PersonalSide)).toBeTruthy();
+		expect(wrapper.exists(MyStyle)).toBeTruthy();
 	});
 
 	it('full renders without crashing', ()=>{

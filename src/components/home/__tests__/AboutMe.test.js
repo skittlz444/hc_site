@@ -13,19 +13,19 @@ describe('<AboutMe />', () => {
 
 	it('renders <LazyImageLoader /> component on shallow render', ()=>{
 		const wrapper = shallow(<AboutMe />);
-		expect(wrapper.exists(LazyImageLoader)).toEqual(true);
+		expect(wrapper.exists(LazyImageLoader)).toBeTruthy();
 	});
 
 	it('renders heading text on shallow render', () => {
 		const wrapper = shallow(<AboutMe />);
-		expect(wrapper.contains('Computer Scientist')).toEqual(true);
-		expect(wrapper.contains('Web Developer')).toEqual(true);
+		expect(wrapper.contains('Computer Scientist')).toBeTruthy();
+		expect(wrapper.contains('Web Developer')).toBeTruthy();
 	});
 
 	it('gets images from correct locations', ()=>{
 		const wrapper = shallow(<AboutMe />);
-		expect(wrapper.exists({tinyImage: backgroundTiny})).toEqual(true);
-		expect(wrapper.exists({image: backgroundImage})).toEqual(true);
+		expect(wrapper.exists({tinyImage: backgroundTiny})).toBeTruthy();
+		expect(wrapper.exists({image: backgroundImage})).toBeTruthy();
 	});
 
 	it('fully renders without crashing', ()=>{
