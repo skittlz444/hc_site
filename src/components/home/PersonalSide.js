@@ -4,7 +4,7 @@ import styles from './PersonalSide.module.css'
 
 import image from './img/personal_side.jpeg'
 import image_tiny from './img/personal_side_tiny.jpeg'
-import LazyImageLoader from '../placeholders/LazyImageLoader'
+import LazyImageLoader from '../LazyImageLoader'
 
 export default class PersonalSide extends React.Component{
 	render(){

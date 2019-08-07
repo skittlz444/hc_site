@@ -4,7 +4,7 @@ import styles from './MyStyle.module.css'
 
 import image from './img/my_style.jpg'
 import image_tiny from './img/my_style_tiny.jpg'
-import LazyImageLoader from '../placeholders/LazyImageLoader'
+import LazyImageLoader from '../LazyImageLoader'
 
 export default class MyStyle extends React.Component{
 	render(){

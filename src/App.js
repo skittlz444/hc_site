@@ -1,16 +1,17 @@
 import React, {Suspense, lazy} from 'react';
-// import logo from './logo.svg';
-// import styles from './App.module.css';
 import MyNavBar from './components/NavBar';
 import sharedStyles from './components/SharedStyles.module.css'
 import SuspensePlaceholder from './components/placeholders/SuspensePlaceholder.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
 require('animate.css')
 require('bootstrap')
-// require('./avilon.css')
 
-const Home = lazy(() => import('./components/Home'));
-const Contact = lazy(() => import('./components/Contact'));
+//start loading the components dynamically but implement a lazy call incase it's required before its ready (preload)
+const homePromise = import('./components/Home');
+const contactPromise = import('./components/Contact');
+const Home = lazy(() => homePromise);
+const Contact = lazy(() => contactPromise);
 
 function App() {
   return (

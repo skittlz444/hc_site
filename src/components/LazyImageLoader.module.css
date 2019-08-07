@@ -1,0 +1,8 @@
+.lazy{
+	filter: blur(3px);
+}
+
+.image{
+	max-width: 100%;
+	max-height: 100%;
+}
