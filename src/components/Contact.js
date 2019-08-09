@@ -10,11 +10,11 @@ export default class Contact extends React.Component{
 	}
 	handleFormSubmit(e){
 		if(e.currentTarget.checkValidity() === false){
-			alert("INVALID");
+			// alert("INVALID");
 			e.preventDefault();
 			e.stopPropagation();
 		} else{
-			alert("submitted");
+			// alert("submitted");
 			e.preventDefault();
 			e.stopPropagation();
 		}
