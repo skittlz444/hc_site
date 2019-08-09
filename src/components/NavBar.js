@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './NavBar.module.css';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import {Link} from 'react-router-dom'
-import MediaQuery from 'react-responsive'
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import {Link} from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 
 export default class MyNavBar extends React.Component{
 	render(){
@@ -36,10 +36,10 @@ export default class MyNavBar extends React.Component{
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 					<Navbar.Collapse className="justify-content-end">
 						<Nav className={styles.navLinksContainer}>
-							<Nav.Link>
+							<Nav.Link as='span'>
 								<Link className={styles.navLink + ' nav-link'} to={'/'}>Home</Link>
 							</Nav.Link>
-							<Nav.Link>
+							<Nav.Link as='span'>
 								<Link className={styles.navLink + ' nav-link'} to={'/contact'}>Contact</Link>
 							</Nav.Link>
 						</Nav>
