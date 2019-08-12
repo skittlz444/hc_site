@@ -1,5 +1,6 @@
 import React, {Suspense, lazy} from 'react';
 import MyNavBar from './components/NavBar';
+import Footer from './components/Footer';
 import sharedStyles from './components/SharedStyles.module.css'
 import SuspensePlaceholder from './components/placeholders/SuspensePlaceholder.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -24,6 +25,7 @@ function App() {
           <Route path='/contact' component={Contact} />
         </Switch>
         </Suspense>
+        <Footer/>
       </Router>
     </div>
   );
