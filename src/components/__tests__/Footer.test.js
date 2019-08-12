@@ -13,11 +13,11 @@ describe('<Footer />', () => {
 
 	it('renders link to linkedin', ()=>{
 		const wrapper = mount(<Footer/>);
-		expect(wrapper.exists({alt:'https://www.linkedin.com/in/haydencarson'})).toBeTruthy();
+		expect(wrapper.exists({href:'https://www.linkedin.com/in/haydencarson'})).toBeTruthy();
 	});
 
 	it('renders link to github', ()=>{
 		const wrapper = mount(<Footer/>);
-		expect(wrapper.exists({alt:'https://github.com/skittlz444'})).toBeTruthy();
+		expect(wrapper.exists({href:'https://github.com/skittlz444'})).toBeTruthy();
 	});
 })
