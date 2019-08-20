@@ -2,7 +2,7 @@ import React from 'react'
 import {shallow, mount} from 'enzyme';
 import LazyImageLoader from '../../LazyImageLoader';
 import PersonalSide from '../PersonalSide'
-import personalSideTiny from '../img/personal_side_tiny.jpeg'
+import personalSideTiny from '../img/personal_side_tiny.jpg'
 import personalSideImage from '../img/personal_side.jpeg'
 
 describe("<PersonalSide />", () => {

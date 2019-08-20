@@ -11,7 +11,7 @@ export default class Footer extends React.Component{
 	render(){
 		return(
 			<Navbar className={styles.footerContainer, 'justify-content-end'} variant='light' bg='light'>
-				<Navbar.Brand inline>
+				<Navbar.Brand inline={"true"}>
 					<Nav className="justify-content-end">
 						<Nav.Link className='nav-link' href='https://www.linkedin.com/in/haydencarson' target="_blank">
 							<Image className={styles.linkLogo} alt='LinkedIn' src={linkedInThumb}/>

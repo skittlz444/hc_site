@@ -2,8 +2,8 @@ import React from 'react'
 import {shallow, mount} from 'enzyme';
 import LazyImageLoader from '../../LazyImageLoader';
 import AboutMe from '../AboutMe'
-import backgroundTiny from '../img/about_me_background_tiny.jpg'
-import backgroundImage from '../img/about_me_background.jpg'
+import backgroundTiny from '../img/hero_tiny.jpg'
+import backgroundImage from '../img/hero.jpeg'
 
 describe('<AboutMe />', () => {
 

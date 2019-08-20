@@ -1,8 +1,8 @@
 import React from 'react';
 import {Row, Col, Container} from 'react-bootstrap'
 import styles from './AboutMe.module.css'
-import hero from './img/about_me_background.jpg'
-import hero_tiny from './img/about_me_background_tiny.jpg'
+import hero from './img/hero.jpeg'
+import hero_tiny from './img/hero_tiny.jpg'
 import LazyImageLoader from '../LazyImageLoader'
 
 export default class AboutMe extends React.Component{

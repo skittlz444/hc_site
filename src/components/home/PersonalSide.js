@@ -3,7 +3,7 @@ import {Row, Col} from 'react-bootstrap'
 import styles from './PersonalSide.module.css'
 
 import image from './img/personal_side.jpeg'
-import image_tiny from './img/personal_side_tiny.jpeg'
+import image_tiny from './img/personal_side_tiny.jpg'
 import LazyImageLoader from '../LazyImageLoader'
 
 export default class PersonalSide extends React.Component{
