@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow, mount} from 'enzyme';
-import LazyImageLoader from '../../LazyImageLoader';
+import LazyImageLoader from '../../shared/LazyImageLoader';
 import MyStyle from '../MyStyle'
 import myStyleTiny from '../img/my_style_tiny.jpg'
 import myStyleImage from '../img/my_style.jpg'

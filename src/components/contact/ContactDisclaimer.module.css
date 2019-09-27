@@ -1,0 +1,15 @@
+.whiteText {
+	color:white!important;
+}
+
+.greyText{
+	color:lightgrey!important;
+}
+
+.disclaimerTerms{
+	font-style: italic;
+}
+
+.disclaimerContainer{
+	padding-bottom:2vh;
+}
