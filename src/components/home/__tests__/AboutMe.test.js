@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow, mount} from 'enzyme';
-import LazyImageLoader from '../../LazyImageLoader';
+import LazyImageLoader from '../../shared/LazyImageLoader';
 import AboutMe from '../AboutMe'
 import backgroundTiny from '../img/hero_tiny.jpg'
 import backgroundImage from '../img/hero.jpeg'

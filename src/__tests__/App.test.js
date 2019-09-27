@@ -1,9 +1,9 @@
 import React, {Suspense as Sus} from 'react';
 import {shallow, mount} from 'enzyme';
 import App from '../App';
-import MyNavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import SuspensePlaceholder from '../components/placeholders/SuspensePlaceholder'
+import MyNavBar from '../components/shared/NavBar';
+import Footer from '../components/shared/Footer';
+import SuspensePlaceholder from '../components/shared/placeholders/SuspensePlaceholder'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 describe("<App />", () => {

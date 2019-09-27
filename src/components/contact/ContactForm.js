@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from './Contact.module.css'
 import {Row, Col, Form, Button, Container} from 'react-bootstrap'
 
-export default class Contact extends React.Component{
+export default class ContactForm extends React.Component{
 	constructor(props){
 		super(props);
 		this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -22,31 +21,24 @@ export default class Contact extends React.Component{
 	}
 
 	render(){
-		return (
-			<div className={styles.contactContainer}>
-				<Container>
+		return(
+			<Container>
+				<Form>
 					<Row>
-						<Col className={styles.contactHeader}>
-							<h3 className={styles.whiteText}>Contact Me</h3>
+						<InputHalfWidth controlId="contactName" placeholder="Who are you?"/>
+						<InputHalfWidth controlId="contactEmail" placeholder="What is your email?"/>
+						<InputFullWidth controlId="contactSubject" placeholder="How can I help you?"/>
+						<TextAreaFullWidth controlId="contactBody" placeholder="Lets talk specifics."/>
+					</Row>
+					<Row>
+						<Col className="justify-content-center">
+							<Button variant="secondary" onClick={this.handleFormSubmit} type="submit">
+								Send me an email
+							</Button>
 						</Col>
 					</Row>
-					<Form>
-						<Row>
-							<InputHalfWidth controlId="contactName" placeholder="Who are you?"/>
-							<InputHalfWidth controlId="contactEmail" placeholder="What is your email?"/>
-							<InputFullWidth controlId="contactSubject" placeholder="How can I help you?"/>
-							<TextAreaFullWidth controlId="contactBody" placeholder="Lets talk specifics."/>
-						</Row>
-						<Row>
-							<Col className="justify-content-center">
-								<Button variant="secondary" onClick={this.handleFormSubmit} type="submit">
-									Send me an email
-								</Button>
-							</Col>
-						</Row>
-					</Form>
-				</Container>
-			</div>
+				</Form>
+			</Container>
 		);
 	}
 }

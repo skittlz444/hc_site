@@ -3,7 +3,7 @@ import {Row, Col, Container} from 'react-bootstrap'
 import styles from './AboutMe.module.css'
 import hero from './img/hero.jpeg'
 import hero_tiny from './img/hero_tiny.jpg'
-import LazyImageLoader from '../LazyImageLoader'
+import LazyImageLoader from '../shared/LazyImageLoader'
 
 export default class AboutMe extends React.Component{
 	render(){
