@@ -25,6 +25,7 @@ export default class ContactForm extends React.Component{
 			e.preventDefault();
 			e.stopPropagation();
 		} else{
+			this.setState({['errors']: ""})
 			alert("submitted");
 			e.preventDefault();
 			e.stopPropagation();
@@ -35,9 +36,11 @@ export default class ContactForm extends React.Component{
 	render(){
 		return(
 			<Container>
-				<div className={styles.errors}>
-					{this.state.errors}
-				</div>
+				<Row>
+					<Col className={styles.errors}>
+						{this.state.errors}
+					</Col>
+				</Row>
 				<Form ref={this.form}>
 					<Row>
 						<InputHalfWidth controlId="contactName" placeholder="Who are you?"/>
