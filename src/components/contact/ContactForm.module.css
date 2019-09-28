@@ -1,3 +1,4 @@
 .errors{
-	color: red !important;
+	color: darkred !important;
+	padding-bottom: 1vh;
 }
