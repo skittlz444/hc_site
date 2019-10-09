@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ContactForm.module.css'
 import {Row, Col, Form, Button, Container} from 'react-bootstrap'
+import {toast} from 'react-toastify';
 
 export default class ContactForm extends React.Component{
 	constructor(props){
@@ -8,6 +9,7 @@ export default class ContactForm extends React.Component{
 		this.state = {
 			errors: null
 		};
+		this.toastID = null;
 		this.form = React.createRef();
 		this.validate = this.validate.bind(this);
 		this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -20,13 +22,15 @@ export default class ContactForm extends React.Component{
 
 	handleFormSubmit(e){
 		if(!this.validate()){
+			if (!toast.isActive(this.toastID))
+				this.toastID = toast.error(<span className={styles.whiteText}>It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.</span>,
+					{autoClose: false});
 			// alert("INVALID");
-			this.setState({['errors']: "It appears something is wrong with your information, please check your details and ensure everything is filled out and correct."})
 			e.preventDefault();
 			e.stopPropagation();
 		} else{
-			this.setState({['errors']: ""})
-			alert("submitted");
+			toast.dismiss();
+			alert("validation success");
 			e.preventDefault();
 			e.stopPropagation();
 		}
@@ -36,11 +40,6 @@ export default class ContactForm extends React.Component{
 	render(){
 		return(
 			<Container>
-				<Row>
-					<Col className={styles.errors}>
-						{this.state.errors}
-					</Col>
-				</Row>
 				<Form ref={this.form}>
 					<Row>
 						<InputHalfWidth controlId="contactName" placeholder="Who are you?"/>

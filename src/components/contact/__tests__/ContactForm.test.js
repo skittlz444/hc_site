@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ContactForm from '../ContactForm';
 import {Form} from 'react-bootstrap'
+import {ToastContainer} from 'react-toastify'
 
 describe('<ContactForm />', () => {
 
@@ -26,20 +27,33 @@ describe('<ContactForm />', () => {
 	});
 
 	it('shows warning dialogue if text fields aren\'t filled in when submit is clicked', ()=>{
-		const wrapper = mount(<ContactForm />);
+		const wrapper = mount(
+				<div>
+    				<ToastContainer/>
+    				<ContactForm />
+    			</div>);
 		wrapper.find('button').simulate('click');
-		expect(wrapper.contains("It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.")).toBeTruthy();
+		setTimeout(function(){
+			expect(wrapper.contains("It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.")).toBeTruthy();
+		});
+		
 	});
 
 	it('shows bad email message if email is not formatted correctly', ()=>{
-		const wrapper = mount(<ContactForm />);
+		const wrapper = mount(
+				<div>
+    				<ToastContainer/>
+    				<ContactForm />
+    			</div>);
 		wrapper.find('#contactName').simulate('change', {target:{value: 'test'}});
 		wrapper.find('#contactSubject').simulate('change', {target:{value: 'test'}});
 		wrapper.find('#contactBody').simulate('change', {target:{value: 'test'}});
 		
 		wrapper.find('#contactEmail').simulate('change', {target: {value: 'invalidEmail'}});
 		wrapper.find('button').simulate('click');
-		expect(wrapper.contains("It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.")).toBeTruthy();
+		setTimeout(function(){
+			expect(wrapper.contains("It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.")).toBeTruthy();
+		});
 	});
 
 	it('replaces button with loading cirlce on filled out form submission', () => {
