@@ -18,12 +18,12 @@ describe("<App />", () => {
 		expect(wrapper.exists(Footer)).toBeTruthy();
 	});
 
-	it('loads routes for home and contact', ()=>{
+	it('loads routes for home, contact and 404', ()=>{
 		const wrapper = shallow(<App />);
 		expect(wrapper.exists(Router)).toBeTruthy();
 		expect(wrapper.exists(Switch)).toBeTruthy();
-		expect(wrapper.find(Route).length).toBe(2);
-		expect(wrapper.exists({path:'/'})).toBeTruthy();
+		expect(wrapper.find(Route).length).toBe(3);
+		expect(wrapper.exists({path:'/home'})).toBeTruthy();
 		expect(wrapper.exists({path:'/contact'})).toBeTruthy();
 	});
 
