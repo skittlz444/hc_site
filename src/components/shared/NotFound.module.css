@@ -1,0 +1,9 @@
+.notFoundText{
+	text-align: center;
+	padding:10%;
+	padding-top: 15vh;
+}
+
+.notFoundContainer{
+	min-height: 70vh;
+}
