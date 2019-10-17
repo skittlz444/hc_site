@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ContactForm.module.css'
-import {Row, Col, Form, Button, Container} from 'react-bootstrap'
+import {Row, Col, Form, Button, Container, Spinner} from 'react-bootstrap'
 import {toast} from 'react-toastify';
 
 export default class ContactForm extends React.Component{
@@ -10,10 +10,12 @@ export default class ContactForm extends React.Component{
 			contactName:'',
 			contactEmail:'',
 			contactSubject:'',
-			contactBody:''
+			contactBody:'',
+			loading:false
 		};
 		this.toastID = null;
 		this.form = React.createRef();
+		this.submitButtonContainer = React.createRef();
 		this.validate = this.validate.bind(this);
 		this.handleFormSubmit = this.handleFormSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
@@ -35,6 +37,7 @@ export default class ContactForm extends React.Component{
 				this.toastID = toast.error(<span className={styles.whiteText}>It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.</span>,
 					{autoClose: false});
 		} else {
+			this.setState({loading:true});
 			toast.dismiss();
 			fetch("https://4it7527y55.execute-api.ap-southeast-2.amazonaws.com/staging/contact", {
 				method: 'POST',
@@ -54,9 +57,11 @@ export default class ContactForm extends React.Component{
     			(result) => {
     				this.toastID = toast.success(<span className={styles.whiteText}>Thank you for submitting a contact request! I'll be in touch within the next few days so keep an eye out in your emails, including your junk folder.</span>,
 						{autoClose: false});
+					this.setState({loading:false});
     			},
     			(error) => {
     				this.toastID = toast.error(<span className={styles.whiteText}>Something went wrong on our end, please try again later</span>, {autoClose:false});
+    				this.setState({loading:false});
     			}
   			);
 		}
@@ -64,6 +69,12 @@ export default class ContactForm extends React.Component{
 	}
 
 	render(){
+
+		const button = <Button variant="secondary" onClick={this.handleFormSubmit} type="submit">
+						Send me an email
+					</Button>;
+		const spinner = <Spinner animation="border" />;
+
 		return(
 			<Container>
 				<Form ref={this.form}>
@@ -75,9 +86,7 @@ export default class ContactForm extends React.Component{
 					</Row>
 					<Row>
 						<Col className="justify-content-center">
-							<Button variant="secondary" onClick={this.handleFormSubmit} type="submit">
-								Send me an email
-							</Button>
+							{this.state.loading?spinner:button}
 						</Col>
 					</Row>
 				</Form>
