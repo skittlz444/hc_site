@@ -25,12 +25,12 @@ export default class ContactForm extends React.Component{
 			if (!toast.isActive(this.toastID))
 				this.toastID = toast.error(<span className={styles.whiteText}>It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.</span>,
 					{autoClose: false});
-			// alert("INVALID");
 			e.preventDefault();
 			e.stopPropagation();
 		} else{
 			toast.dismiss();
-			alert("validation success");
+			this.toastID = toast.success(<span className={styles.whiteText}>Thank you for submitting a contact request! I'll be in touch within the next few days so keep an eye out in your emails, including your junk folder.</span>,
+					{autoClose: false});
 			e.preventDefault();
 			e.stopPropagation();
 		}
