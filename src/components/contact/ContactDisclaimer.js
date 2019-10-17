@@ -19,6 +19,9 @@ export default class ContactDisclaimer extends React.Component{
 							In the case that my implementation of your un-infringing idea(s) infringes on intellectual property, I claim responsibility.
 							By submitting the below form you acknowledge the above terms.
 						</div>
+						<div className={`${styles.greyText} ${styles.disclaimerTerms}`}>
+							The above terms may be subject to change on a case by case basis.
+						</div>
 					</Col>
 				</Row>
 			</Container>
