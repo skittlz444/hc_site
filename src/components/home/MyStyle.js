@@ -26,27 +26,20 @@ export default class MyStyle extends React.Component{
 							<div className=" wow fadeInRight slow">
 								<div className={styles.myStyleTextGroup}>
 									<div className={styles.quoteText}>
-										"Mobile is not the future, its the now."
-									</div>
-									<div className={styles.quoteAuthor}>
-										Cyndie Shaffstall, Founder of Spider Trainers
+										Code sustainability is more than a principle, it's an imperative
 									</div>
 								</div>
 								<div className={styles.myStyleTextGroup}>
-									Every business is unique, every requirement has its own challenges, and every problem has many solutions.
-									The trick is to find the most efficient and elegant way of designing and delivering those solutions.
-									Years of practice with multiple languages, over a vast variety of tasks has equipped me with the tools required to do exactly that.
+									Enterprise solutions are not about technology, they are about goals and deliverables. 
+									Designing a solution is about more than what works now, it is about what will still be working years later, clients later, and many hands later.
 								</div>
 								<div className={styles.myStyleTextGroup}>
-									We live in an increasingly mobile world. That is why when I design web solutions, I design for both desktop and mobile devices, together. 
-									Your business should be reachable by anyone, anywhere, on any platform. With me, that's a priority.
+									Architectural design, clear and concise implementation, and a dash of corporate realism, are the factors driving development in the modern world.
+									New technologies, new projects, new goals and new experiences, we are never a finished product, and neither is our work.
 								</div>
 								<div className={styles.myStyleTextGroup}>
 									<div className={styles.quoteText}>
-										"Simplicity, carried to the extreme, becomes elegance"
-									</div>
-									<div className={styles.quoteAuthor}>
-										Joe Franklin
+										No one is ever finished learning. No one is ever finished growing
 									</div>
 								</div>
 							</div>
@@ -54,6 +47,6 @@ export default class MyStyle extends React.Component{
 					</Col>
 				</Row>
 			</div>
-			)
+		)
 	}
 }
