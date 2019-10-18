@@ -1,9 +1,10 @@
 import React from 'react';
-import MyNavBar from '../NavBar';
 import {BrowserRouter as Router, Link} from 'react-router-dom'
 import {shallow, mount} from 'enzyme';
 import {Brand} from 'react-bootstrap/Navbar';
 import {Link as NavLink} from 'react-bootstrap/Nav';
+
+import MyNavBar from '../NavBar';
 
 //Note that the tests must be run under a router as react throws an error if a link is used out of a router (links are used in mynavbar)
 describe('<MyNavBar />', ()=>{
@@ -33,4 +34,4 @@ describe('<MyNavBar />', ()=>{
 			</Router>
 		);
 	});
-})
+});

@@ -1,7 +1,8 @@
-import React from 'react'
-import {Image} from 'react-bootstrap'
-import styles from './LazyImageLoader.module.css'
-import LazyLoad from 'react-lazyload'
+import React from 'react';
+import {Image} from 'react-bootstrap';
+import LazyLoad from 'react-lazyload';
+
+import styles from './LazyImageLoader.module.css';
 
 export default class LazyImageLoader extends React.Component{
 	constructor(props){
@@ -20,10 +21,10 @@ export default class LazyImageLoader extends React.Component{
 					height={100}
 					offsetVertical={500}
 					once={true}
-					>
-						<Image className={styles.image} src={this.props.image} alt={this.props.alt}/>
+				>
+					<Image className={styles.image} src={this.props.image} alt={this.props.alt}/>
 				</LazyLoad>
 			</div>
-			)
+		)
 	}
 }

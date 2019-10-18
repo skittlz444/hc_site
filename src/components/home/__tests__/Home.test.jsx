@@ -1,11 +1,13 @@
 import React from 'react';
-import Home from '../Home';
-import AboutMe from '../AboutMe';
-import MyStyle from '../MyStyle';
-import PersonalSide from '../PersonalSide';
 import {shallow, mount} from 'enzyme';
 
+import AboutMe from '../AboutMe';
+import Home from '../Home';
+import MyStyle from '../MyStyle';
+import PersonalSide from '../PersonalSide';
+
 //supress console warning about mutationobserver not being supported by browser (from WOW.js)
+//unfortunately this supresses all warnings, however we are mainly looking for functional errors
 console.warn = jest.fn();
 
 describe('<Home />', () => {
@@ -23,4 +25,4 @@ describe('<Home />', () => {
 	it('full renders without crashing', ()=>{
 		mount(<Home />);
 	});
-})
+});

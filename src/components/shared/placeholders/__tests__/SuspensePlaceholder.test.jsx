@@ -1,6 +1,7 @@
 import React from 'react';
-import SuspensePlaceholder from '../SuspensePlaceholder';
 import {shallow, mount} from 'enzyme';
+
+import SuspensePlaceholder from '../SuspensePlaceholder';
 
 describe('<SuspensePlaceholder />', ()=>{
 	it('shallow renders without crashing', ()=>{

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Row, Col} from 'react-bootstrap'
-import styles from './PersonalSide.module.css'
+import {Row, Col} from 'react-bootstrap';
 
-import image from './img/personal_side.jpeg'
-import image_tiny from './img/personal_side_tiny.jpg'
-import LazyImageLoader from '../shared/LazyImageLoader'
+import image from './img/personal_side.jpeg';
+import image_tiny from './img/personal_side_tiny.jpg';
+import LazyImageLoader from '../shared/LazyImageLoader';
+import styles from './PersonalSide.module.css';
 
 export default class PersonalSide extends React.Component{
 	render(){
@@ -17,7 +17,12 @@ export default class PersonalSide extends React.Component{
 					<Col className={styles.personalSideCol} lg={{order:2}}>
 						<Col>
 							<div>
-								<LazyImageLoader tinyImage={image_tiny} image={image} alt="Personal Side" className={styles.personalSideImage + ' wow fadeInRight slow'}/>
+								<LazyImageLoader 
+								tinyImage={image_tiny} 
+								image={image} 
+								alt="Personal Side" 
+								className={styles.personalSideImage + ' wow fadeInRight slow'}
+								/>
 							</div>
 						</Col>
 					</Col>
@@ -26,7 +31,8 @@ export default class PersonalSide extends React.Component{
 							<div className=" wow fadeInLeft slow">
 								<div className={styles.personalSideTextGroup}>
 									<h4>
-										<span>There is more to an employee than a tool. </span><span>There is also a person.</span>
+										<span>There is more to an employee than a tool. </span>
+										<span>There is also a person.</span>
 									</h4>
 									<h5>
 										So who am I as a person?
@@ -42,6 +48,6 @@ export default class PersonalSide extends React.Component{
 					</Col>
 				</Row>
 			</div>
-		);
+		)
 	}
 }

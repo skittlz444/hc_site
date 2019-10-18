@@ -2,15 +2,16 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import {Image} from 'react-bootstrap';
+
+import gitHubLogo from './img/GitHub_Logo.png';
+import gitHubThumb from './img/GitHub-Mark-32px.png';
+import linkedInThumb from './img/LI-Logo.png';
 import styles from './Footer.module.css';
-import linkedInThumb from './img/LI-Logo.png'
-import gitHubLogo from './img/GitHub_Logo.png'
-import gitHubThumb from './img/GitHub-Mark-32px.png'
 
 export default class Footer extends React.Component{
 	render(){
 		return(
-			<Navbar className={styles.footerContainer, 'justify-content-end'} variant='light' bg='light'>
+			<Navbar className={styles.footerContainer + ' justify-content-end'} variant='light' bg='light'>
 				<Navbar.Brand inline={"true"}>
 					<Nav className="justify-content-end">
 						<Nav.Link className='nav-link' href='https://www.linkedin.com/in/haydencarson' target="_blank">
