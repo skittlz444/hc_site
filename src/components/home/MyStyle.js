@@ -1,10 +1,10 @@
 import React from 'react';
-import {Row, Col} from 'react-bootstrap'
-import styles from './MyStyle.module.css'
+import {Row, Col} from 'react-bootstrap';
 
-import image from './img/my_style.jpg'
-import image_tiny from './img/my_style_tiny.jpg'
-import LazyImageLoader from '../shared/LazyImageLoader'
+import image from './img/my_style.jpg';
+import image_tiny from './img/my_style_tiny.jpg';
+import LazyImageLoader from '../shared/LazyImageLoader';
+import styles from './MyStyle.module.css';
 
 export default class MyStyle extends React.Component{
 	render(){
@@ -17,7 +17,12 @@ export default class MyStyle extends React.Component{
 					<Col className={styles.myStyleCol} lg={{order:1}}>
 						<Col>
 							<div>
-								<LazyImageLoader tinyImage={image_tiny} image={image} alt="Personal Side" className={styles.myStyleImage + ' wow fadeInLeft slow'}/>
+								<LazyImageLoader 
+								tinyImage={image_tiny} 
+								image={image} 
+								alt="Personal Side" 
+								className={styles.myStyleImage + ' wow fadeInLeft slow'}
+								/>
 							</div>
 						</Col>
 					</Col>

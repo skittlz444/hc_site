@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
+import {Form} from 'react-bootstrap';
+import {ToastContainer} from 'react-toastify';
+
 import ContactForm from '../ContactForm';
-import {Form} from 'react-bootstrap'
-import {ToastContainer} from 'react-toastify'
 
 describe('<ContactForm />', () => {
-
 	it('shallow renders without crashing', ()=>{
 		shallow(<ContactForm />);
 	});
@@ -36,7 +36,6 @@ describe('<ContactForm />', () => {
 		setTimeout(function(){
 			expect(wrapper.contains("It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.")).toBeTruthy();
 		});
-		
 	});
 
 	it('shows bad email message if email is not formatted correctly', ()=>{
@@ -55,4 +54,4 @@ describe('<ContactForm />', () => {
 			expect(wrapper.contains("It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.")).toBeTruthy();
 		});
 	});
-})
+});

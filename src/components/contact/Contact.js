@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from './Contact.module.css'
-import ContactForm from './ContactForm'
-import ContactDisclaimer from './ContactDisclaimer'
-import {Row, Col, Container} from 'react-bootstrap'
+import {Row, Col, Container} from 'react-bootstrap';
+
+import styles from './Contact.module.css';
+import ContactDisclaimer from './ContactDisclaimer';
+import ContactForm from './ContactForm';
 
 export default class Contact extends React.Component{
 	render(){
@@ -30,5 +31,5 @@ export default class Contact extends React.Component{
 				</Container>
 			</div>
 		);
-	}
-}
+	};
+};

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import {shallow, mount} from 'enzyme';
-import {Image} from 'react-bootstrap'
-import LazyLoad from 'react-lazyload'
-import LazyImageLoader from '../LazyImageLoader'
-import image from './tiny_test.jpg'
+import {Image} from 'react-bootstrap';
+import LazyLoad from 'react-lazyload';
+
+import image from './tiny_test.jpg';
+import LazyImageLoader from '../LazyImageLoader';
 
 describe('<LazyImageLoader />', () => {
 	it('shallow renders without crashing', ()=>{
