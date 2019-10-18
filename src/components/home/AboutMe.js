@@ -15,10 +15,10 @@ export default class AboutMe extends React.Component{
 								<Col>
 									<div className={styles.aboutMeText}>
 										<h3 className={styles.whiteText}>
-											Computer Scientist
+											Software Developer
 										</h3>
 										<h5 className={styles.whiteText}>
-											Designing efficient solutions for complex challenges
+											Designing sustainable solutions for enterprise challenges
 										</h5>
 										
 									</div>
@@ -31,7 +31,7 @@ export default class AboutMe extends React.Component{
 											Web Developer
 										</h3>
 										<h5 className={styles.whiteText}>
-											Working with you to build elegant web solutions for your business
+											Considering the client at all stages of design
 										</h5>
 									</div>
 								</Col>

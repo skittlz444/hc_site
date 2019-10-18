@@ -30,7 +30,7 @@ export default class MyNavBar extends React.Component{
 					</Navbar.Brand>
 					<MediaQuery minWidth={600}>
 						<Navbar.Brand className={styles.navBrandSubHeadings}>
-							<p className={styles.whiteText}>Software Engineer</p><p className={styles.whiteText}>Web Developer</p>
+							<p className={styles.whiteText}>Software Developer</p><p className={styles.whiteText}>Web Developer</p>
 						</Navbar.Brand>
 					</MediaQuery>
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
