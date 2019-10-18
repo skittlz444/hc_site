@@ -1,12 +1,12 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
+import {Form} from 'react-bootstrap';
+
 import Contact from '../Contact';
-import ContactForm from '../ContactForm';
 import ContactDisclaimer from '../ContactDisclaimer';
-import {Form} from 'react-bootstrap'
+import ContactForm from '../ContactForm';
 
 describe('<Contact />', () => {
-
 	it('shallow renders without crashing', ()=>{
 		shallow(<Contact />);
 	});
@@ -20,4 +20,4 @@ describe('<Contact />', () => {
 	it('fully renders without crashing', ()=>{
 		mount(<Contact />);
 	});
-})
+});

@@ -1,21 +1,25 @@
 import React from 'react';
-import styles from './ContactForm.module.css'
-import {Row, Col, Form, Button, Container, Spinner} from 'react-bootstrap'
+import {Row, Col, Form, Button, Container, Spinner} from 'react-bootstrap';
 import {toast} from 'react-toastify';
+
+import styles from './ContactForm.module.css';
 
 export default class ContactForm extends React.Component{
 	constructor(props){
 		super(props);
+
 		this.state = {
-			contactName:'',
-			contactEmail:'',
-			contactSubject:'',
-			contactBody:'',
-			loading:false
+			contactName: '',
+			contactEmail: '',
+			contactSubject: '',
+			contactBody: '',
+			loading: false,
+			toastID: null
 		};
-		this.toastID = null;
+
 		this.form = React.createRef();
 		this.submitButtonContainer = React.createRef();
+
 		this.validate = this.validate.bind(this);
 		this.handleFormSubmit = this.handleFormSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
@@ -33,9 +37,13 @@ export default class ContactForm extends React.Component{
 		e.preventDefault();
 		e.stopPropagation();
 		if(!this.validate()){
-			if (!toast.isActive(this.toastID))
-				this.toastID = toast.error(<span className={styles.whiteText}>It appears something is wrong with your information, please check your details and ensure everything is filled out and correct.</span>,
-					{autoClose: false});
+			if (!toast.isActive(this.state.toastID))
+				this.setState({
+					'toastID': toast.error(
+						<span className={styles.whiteText}>It appears something is wrong with your information, 
+						please check your details and ensure everything is filled out and correct.</span>,
+					{autoClose: false})
+			});
 		} else {
 			this.setState({loading:true});
 			toast.dismiss();
@@ -55,21 +63,29 @@ export default class ContactForm extends React.Component{
 			.then(res => res.json())
   			.then(
     			(result) => {
-    				this.toastID = toast.success(<span className={styles.whiteText}>Thank you for submitting a contact request! I'll be in touch within the next few days so keep an eye out in your emails, including your junk folder.</span>,
-						{autoClose: false});
+    				this.setState({
+    					'toastID': toast.success(
+    						<span className={styles.whiteText}>Thank you for submitting a contact request! 
+    						I'll be in touch within the next few days so keep an eye out in your emails, 
+    						including your junk folder.</span>,
+						{autoClose: false})
+    				});
 					this.setState({loading:false});
     			},
     			(error) => {
-    				this.toastID = toast.error(<span className={styles.whiteText}>Something went wrong on our end, please try again later</span>, {autoClose:false});
+    				this.setState({
+    					'toastID': toast.error(
+    						<span className={styles.whiteText}>Something went wrong on our end, 
+    						please try again later</span>, 
+    						{autoClose:false})
+    				});
     				this.setState({loading:false});
     			}
   			);
 		}
-		 
 	}
 
 	render(){
-
 		const button = <Button variant="secondary" onClick={this.handleFormSubmit} type="submit">
 						Send me an email
 					</Button>;
@@ -99,7 +115,13 @@ const TextAreaFullWidth = (props) => {
 	return(
 		<Col lg={12} xs={12} sm={12} md={12}>
 			<Form.Group controlId={props.controlId}>
-				<Form.Control as="textarea" value={props.value} onChange={props.onChange} rows={5} required placeholder={props.placeholder}/>
+				<Form.Control 
+				as="textarea" 
+				value={props.value} 
+				onChange={props.onChange} 
+				rows={5} 
+				required 
+				placeholder={props.placeholder}/>
 			</Form.Group>
 		</Col>
 	)
@@ -109,18 +131,28 @@ const InputFullWidth = (props) => {
 	return(
 		<Col lg={12} xs={12} sm={12} md={12}>
 			<Form.Group controlId={props.controlId}>
-				<Form.Control type={props.type == null? "text": props.type} value={props.value} onChange={props.onChange} required placeholder={props.placeholder}/>
+				<Form.Control 
+				type={props.type == null? "text": props.type} 
+				value={props.value} 
+				onChange={props.onChange} 
+				required 
+				placeholder={props.placeholder}/>
 			</Form.Group>
 		</Col>
-		)
+	)
 }
 
 const InputHalfWidth = (props) => {
 	return(
 		<Col lg={6} xs={12} sm={12} md={6}>
 			<Form.Group controlId={props.controlId}>
-				<Form.Control type={props.type == null? "text": props.type} value={props.value} onChange={props.onChange} required placeholder={props.placeholder}/>
+				<Form.Control 
+				type={props.type == null? "text": props.type} 
+				value={props.value} 
+				onChange={props.onChange} 
+				required 
+				placeholder={props.placeholder}/>
 			</Form.Group>
 		</Col>
-		)
+	)
 }

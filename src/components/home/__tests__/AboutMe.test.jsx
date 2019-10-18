@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import {shallow, mount} from 'enzyme';
+
+import AboutMe from '../AboutMe';
+import backgroundImage from '../img/hero.jpeg';
+import backgroundTiny from '../img/hero_tiny.jpg';
 import LazyImageLoader from '../../shared/LazyImageLoader';
-import AboutMe from '../AboutMe'
-import backgroundTiny from '../img/hero_tiny.jpg'
-import backgroundImage from '../img/hero.jpeg'
 
 describe('<AboutMe />', () => {
-
 	it('shallow renders without crashing', ()=>{
 		shallow(<AboutMe />);
 	});

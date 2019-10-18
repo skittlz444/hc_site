@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './ContactDisclaimer.module.css'
-import {Row, Col, Container} from 'react-bootstrap'
+import {Row, Col, Container} from 'react-bootstrap';
+
+import styles from './ContactDisclaimer.module.css';
 
 export default class ContactDisclaimer extends React.Component{
 	render(){
@@ -26,5 +27,5 @@ export default class ContactDisclaimer extends React.Component{
 				</Row>
 			</Container>
 		);
-	}
-}
+	};
+};

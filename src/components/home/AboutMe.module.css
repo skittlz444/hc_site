@@ -5,7 +5,6 @@
 .aboutContainer{
 	min-height: 15rem;
 	background:linear-gradient(45deg, rgba(32,154,253,0.8),rgba(0,25,210,0.8)), no-repeat center;
-	color:white;
 	width: 100%;
 	margin:0;
 }
@@ -29,9 +28,4 @@
 
 .aboutMeHeroContainer{
 	padding:0;
-}
-
-.heroImage{	
-	max-xheight: 100%;
-	max-width: 100%;
 }

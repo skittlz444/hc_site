@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import {shallow, mount} from 'enzyme';
+
 import LazyImageLoader from '../../shared/LazyImageLoader';
-import MyStyle from '../MyStyle'
-import myStyleTiny from '../img/my_style_tiny.jpg'
-import myStyleImage from '../img/my_style.jpg'
+import MyStyle from '../MyStyle';
+import myStyleImage from '../img/my_style.jpg';
+import myStyleTiny from '../img/my_style_tiny.jpg';
 
 describe("<MyStyle />", () => {
-
 	it('shallow renders without crashing', ()=>{	
 		shallow(<MyStyle />);
 	});

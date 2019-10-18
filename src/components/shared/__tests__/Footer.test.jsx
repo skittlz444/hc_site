@@ -1,7 +1,8 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
+import {BrowserRouter as Router} from 'react-router-dom';
+
 import Footer from '../Footer';
-import {BrowserRouter as Router} from 'react-router-dom'
 
 describe('<Footer />', () => {
 	it('shallow renders without crashing', ()=>{
@@ -21,4 +22,4 @@ describe('<Footer />', () => {
 		const wrapper = mount(<Router><Footer/></Router>);
 		expect(wrapper.exists({href:'https://github.com/skittlz444'})).toBeTruthy();
 	});
-})
+});
