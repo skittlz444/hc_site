@@ -12,7 +12,7 @@ import NotFound from './components/shared/NotFound';
 //warning needs to be suppressed by the next line
 // eslint-disable-next-line
 import sharedStyles from './components/shared/SharedStyles.module.css';
-import SuspensePlaceholder from './components/shared/placeholders/SuspensePlaceholder.js';
+import SuspensePlaceholder from './components/shared/placeholders/SuspensePlaceholder';
 
 require('animate.css');
 require('bootstrap');
