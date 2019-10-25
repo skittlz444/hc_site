@@ -9,7 +9,7 @@ import styles from './NavBar.module.css';
 export default class MyNavBar extends React.Component{
 	render(){
 		return (
-			<Navbar className={styles.navContainer} bg="dark" variant="dark" expand="md" sticky="top">
+			<Navbar className={styles.navContainer} bg="dark" variant="dark" expand="md" collapseOnSelect sticky="top">
 				<Navbar.Brand className={styles.navBrand}>
 					<MediaQuery minWidth={450}>
 						{
@@ -39,10 +39,10 @@ export default class MyNavBar extends React.Component{
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse className="justify-content-end">
 					<Nav className={styles.navLinksContainer}>
-						<Nav.Link as='span'>
+						<Nav.Link as='span' eventKey>
 							<Link className={styles.navLink + ' nav-link'} to={'/'}>Home</Link>
 						</Nav.Link>
-						<Nav.Link as='span'>
+						<Nav.Link as='span' eventKey>
 							<Link className={styles.navLink + ' nav-link'} to={'/contact'}>Contact</Link>
 						</Nav.Link>
 					</Nav>
