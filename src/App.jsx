@@ -20,7 +20,7 @@ require('bootstrap');
 //start loading the components lazily but implement an immediate promise incase it's required before its ready (preload)
 const contactPromise = import('./components/contact/Contact');
 const Contact = lazy(() => contactPromise);
-const homePromise = import('./components//home/Home');
+const homePromise = import('./components/home/Home');
 const Home = lazy(() => homePromise);
 
 function App() {
