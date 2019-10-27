@@ -32,11 +32,11 @@
 
 @media(max-width: 768px){
 	.aboutMeRow {
-		padding-top: 2.5rem;
+		padding-top: 3rem;
 		padding-bottom: 3.5rem;
 	}
 
 	.aboutMeHeroContainer{
-		padding-top:2rem;
+		padding-top:1.5rem;
 	}
 }
