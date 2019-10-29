@@ -6,29 +6,29 @@ import {Link} from 'react-router-dom';
 
 import styles from './NavBar.module.css';
 
-export default class MyNavBar extends React.Component{
+export default class MyNavBar extends React.Component {
 	render(){
 		return (
 			<Navbar className={styles.navContainer} bg="dark" variant="dark" expand="md" collapseOnSelect sticky="top">
 				<Navbar.Brand className={styles.navBrand}>
-					<MediaQuery minWidth={450}>
-						{
-							(matches)=> {
-								if (matches){
-									return (
-										<h2 className={styles.whiteText}>
-											Hayden Carson
-										</h2>)
-								} else {
-									return (
-										<h2 className={styles.whiteText}>
-											H.Carson 
-										</h2>
-									)
+					<Nav.Link as='span' bsPrefix="no_class" eventKey>
+						<Link to={'/'} >
+							<MediaQuery minWidth={450}>
+								{
+									(matches)=> {
+										if (matches){
+											return (
+												<h2 className={`${styles.whiteText} ${styles.navHeader}`}>Hayden Carson</h2>)
+										} else {
+											return (
+												<h2 className={`${styles.whiteText} ${styles.navHeader}`}>H.Carson</h2>
+											)
+										}
+									}
 								}
-							}
-						}
-					</MediaQuery>
+							</MediaQuery>
+						</Link>
+					</Nav.Link>
 				</Navbar.Brand>
 				<MediaQuery minWidth={600}>
 					<Navbar.Brand className={styles.navBrandSubHeadings}>
