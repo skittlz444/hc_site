@@ -7,9 +7,38 @@ import {Link} from 'react-router-dom';
 import styles from './NavBar.module.css';
 
 export default class MyNavBar extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			navToggleOpen: false,
+			lastY: 0
+		};
+		this.handleScroll = this.handleScroll.bind(this);
+		this.handleToggle = this.handleToggle.bind(this);
+	}
+
+	handleToggle(e){
+		this.setState({'navToggleOpen':!this.state.navToggleOpen});
+		this.setState({'lastY':window.scrollY});
+	}
+
+	handleScroll(e){
+		if(window.scrollY < this.state.lastY - 50  || window.scrollY > this.state.lastY + 120){
+			this.setState({'lastY':window.scrollY});
+    		if(this.state.navToggleOpen)
+				this.handleToggle();
+		}
+	}
+
+	componentDidMount() {
+    	document.addEventListener('scroll', () => {
+    			this.handleScroll();
+    	});
+  	}
+
 	render(){
-		return (
-			<Navbar className={styles.navContainer} bg="dark" variant="dark" expand="md" collapseOnSelect sticky="top">
+		return ( 
+			<Navbar expanded={this.state.navToggleOpen} onToggle={this.handleToggle} className={styles.navContainer} bg="dark" variant="dark" expand="md" collapseOnSelect sticky="top">
 				<Navbar.Brand className={styles.navBrand}>
 					<Nav.Link as='span' bsPrefix="no_class" eventKey>
 						<Link to={'/'} >
