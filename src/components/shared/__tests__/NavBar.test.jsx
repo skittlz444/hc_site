@@ -17,14 +17,14 @@ describe('<MyNavBar />', ()=>{
 		expect(wrapper.find(Brand).length).toBe(2);
 	});
 
-	it('shallow render contains 2 <Nav.Link /> components', ()=>{
+	it('shallow render contains 3 <Nav.Link /> components', ()=>{
 		const wrapper = shallow(<MyNavBar />);
-		expect(wrapper.find(NavLink).length).toBe(2);
+		expect(wrapper.find(NavLink).length).toBe(3);
 	});
 
-	it('shallow render contains 2 <Link /> components', ()=>{
+	it('shallow render contains 3 <Link /> components', ()=>{
 		const wrapper = shallow(<MyNavBar />);
-		expect(wrapper.find(Link).length).toBe(2);
+		expect(wrapper.find(Link).length).toBe(3);
 	})
 
 	it('fully renders without crashing', ()=>{

@@ -29,3 +29,14 @@
 .aboutMeHeroContainer{
 	padding:0;
 }
+
+@media(max-width: 768px){
+	.aboutMeRow {
+		padding-top: 3rem;
+		padding-bottom: 3.5rem;
+	}
+
+	.aboutMeHeroContainer{
+		padding-top:1.5rem;
+	}
+}
